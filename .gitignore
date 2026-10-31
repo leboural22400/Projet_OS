@@ -1,0 +1,9 @@
+# Fichiers propres à l'environnement (les exemples *.example.txt sont versionnés)
+computers.txt
+required-patches.txt
+
+# Rapports, journaux et empreintes générés à l'exécution
+Rapports/
+
+# Fichier JEA régénéré par Prepare-WinRM.ps1
+PatchManagementJEA.pssc

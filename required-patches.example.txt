@@ -1,0 +1,8 @@
+# Correctifs de sécurité obligatoires : un identifiant KB par ligne.
+# Le préfixe "KB" est ajouté automatiquement s'il est omis.
+# Copier ce fichier en required-patches.txt et le remplacer par des KB réelles :
+# pour une démo parlante, prendre des KB présentes sur un poste (Get-HotFix)
+# et au moins une KB absente, afin d'obtenir un poste NON CONFORME.
+KB5034441
+KB5031356
+KB5032189

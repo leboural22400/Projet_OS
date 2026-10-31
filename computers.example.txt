@@ -1,0 +1,6 @@
+# Inventaire du parc : NOM;ADRESSE_IP (une machine par ligne)
+# Les lignes commençant par # et les lignes sans ';' sont ignorées.
+# Copier ce fichier en computers.txt et l'adapter à l'environnement de test.
+PC01;192.168.10.11
+PC02;192.168.10.12
+PC03;192.168.10.13
