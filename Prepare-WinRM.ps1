@@ -179,8 +179,9 @@ if ($Role -eq "Cible") {
         New-ModuleManifest -Path "$ModuleDir\PatchManagementJEA.psd1"
 
         # Liste blanche stricte : seules les commandes et paramètres utilisés par l'audit sont visibles.
-        # Les modules sont importés explicitement : l'auto-chargement est désactivé dans une session JEA.
-        New-PSRoleCapabilityFile -Path $RoleFile -ModulesToImport 'CimCmdlets', 'Microsoft.PowerShell.Management' -VisibleCmdlets @(
+        # CimCmdlets est importé explicitement : l'auto-chargement est désactivé dans une session JEA.
+        # (Get-HotFix et Get-Service viennent de Microsoft.PowerShell.Management, déjà chargé d'office.)
+        New-PSRoleCapabilityFile -Path $RoleFile -ModulesToImport 'CimCmdlets' -VisibleCmdlets @(
             'Get-HotFix',
             @{ Name = 'Get-Service';     Parameters = @{ Name = 'Name'; ValidateSet = 'wuauserv' } },
             @{ Name = 'Get-CimInstance'; Parameters = @{ Name = 'ClassName'; ValidateSet = 'Win32_OperatingSystem', 'Win32_ComputerSystem', 'Win32_BIOS', 'Win32_LogicalDisk' } }
